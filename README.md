@@ -1,7 +1,7 @@
 Ecommere website.
 
-HTML & CSS
+Made with HTML & CSS
 
 Live view link 🔗
 
-https://4ourpixels.github.io/School-Website/
+https://4ourpixels.github.io/ecommerce/
