@@ -5,10 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Shop | Store</title>
+    <title>Arap Trap - Merchandise</title>
+    <link
+        rel="icon"
+        type="image/x-icon"
+        sizes="32x32"
+        href="./images/favicon.ico"
+    />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        .text-primary-change{
+            color: #30d5c8;
+        }
+        .text-white{
+            color: #ffffff;
+        }
+        .text-center {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+        .mb3{
+            margin-bottom: 3rem;
+        }
+    </style>
 </head>
 <body>
 <!---- header ----->
@@ -17,27 +44,23 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                   <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                   <a href="index.html"><img src="images/logo-white.png" width="125px"></a>
                 </div>
                 <nav>
                     <ul id="MenuItems">
                         <li><a href="index.html">Home</li></a>
                         <li><a href="products.html">Products</li></a>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
                         <a href="account.html"><li>Account</li></a>
                     </ul>
                 </nav>
-                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
-                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                <a href="cart.html"><img style="filter: invert();" src="images/cart.png" width="30px" height="30px"></a>
+                <img style="filter: invert();" src="images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
             <div class="row">
                 <div class="col-2">
-                    <h1>Give Your Workout<br>A New Style!</h1>
-                    <p>Success isn't always about greatness. It's about
-                        consistency. Consistent<br>hard work gains success. Greatness
-                        will come.</p>
-                        <a href="products.html" class="btn">Explore now &#8594;</a>
+                    <h1 class="text-white">Arap Trap's Merchandise Store.</h1>
+                    <p>Shop the latest collection of urban, modern, and fresh merchandise inspired by Arap Trap's unique style.</p>
+                    <a href="products.html" class="btn">Shop now &#8594;</a>
                 </div>
                 <div class="col-2">
                     <img src="images/image1.png">
@@ -48,16 +71,19 @@
 
 <!---- featured categories ----->
     <div class="categories">
+        <h1 class="text-center mb3 sub-title">UZI Szn Edition</h1>
+        <h3 class="text-center mb3">Discover the perfect blend of street culture, hip-hop, and<br>R&B influences in our exclusive apparel, accessories, and more.</h3>
+
     <div class="small-container">
         <div class="row">
             <div class="col-3">
-                <img src="images/category-1.jpg">
+                <img src="images/category-1.png">
             </div>
             <div class="col-3">
-                <img src="images/category-2.jpg">
+                <img src="images/category-2.png">
             </div>
             <div class="col-3">
-                <img src="images/category-3.jpg">
+                <img src="images/category-3.png">
             </div>
         </div>
     </div>
@@ -68,8 +94,8 @@
     <h2 class="title">Featured Products</h2>
     <div class="row">
         <div class="col-4">
-            <a href="product-details.html"><img src="images/product-1.jpg"></a>
-            <a href="product-details.html"><h4>Red Printerd T-shirt</h4></a>
+            <a href="product-details.html"><img src="images/product-1.png"></a>
+            <a href="product-details.html"><h4>Arap Trap Old English</h4></a>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -77,11 +103,11 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
         <div class="col-4">
-            <img src="images/product-2.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-2.png">
+            <h4>Arap Trap Old English 2.0</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -89,11 +115,11 @@
                 <i class="fa fa-star-half-o"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
         <div class="col-4">
-            <img src="images/product-3.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-3.png">
+            <h4>Arap Trap 2023</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -101,11 +127,11 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
         <div class="col-4">
-            <img src="images/product-4.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-4.png">
+            <h4>Arap Trap 2023 Alternate</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -113,14 +139,14 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
     </div>
-    <h2 class="title">Latest Products</h2>
+    <h2 class="title">Join the movement and embrace the unparalleled talent and creativity of DJ G400.</h2>
     <div class="row">
         <div class="col-4">
-            <img src="images/product-5.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-5.png">
+            <h4>Arap Trap Calligraffiti</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -128,11 +154,11 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
         <div class="col-4">
-            <img src="images/product-6.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-6.png">
+            <h4>Arap Trap Calligraffiti</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -140,11 +166,11 @@
                 <i class="fa fa-star-half-o"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
         <div class="col-4">
-            <img src="images/product-7.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-7.png">
+            <h4>Arap Trap 2023 SZN</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -152,11 +178,11 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$35.00</p>
         </div>
         <div class="col-4">
-            <img src="images/product-8.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-8.png">
+            <h4>Arap Trap Uzi</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -164,13 +190,13 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
     </div>
     <div class="row">
         <div class="col-4">
-            <img src="images/product-9.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-9.png">
+            <h4>Arap Trap Graffiti Tag</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -178,11 +204,11 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
         <div class="col-4">
-            <img src="images/product-10.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-10.png">
+            <h4>Arap Trap Summer 2023</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -190,11 +216,11 @@
                 <i class="fa fa-star-half-o"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
         <div class="col-4">
-            <img src="images/product-11.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-11.png">
+            <h4>Arap Trap Summer 2023</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -202,11 +228,11 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
         <div class="col-4">
-            <img src="images/product-12.jpg">
-            <h4>Red Printerd T-shirt</h4>
+            <img src="images/product-12.png">
+            <h4>Arap Trap Old English 2.0</h4>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -214,7 +240,7 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p>$30.00</p>
         </div>
     </div> 
     </div>
@@ -225,66 +251,10 @@
         <div class="row">
             <div class="col-2"><img src="images/exclusive.png" class="offer-img"></div>
             <div class="col-2">
-                <p>Exclusively Available on Luku Store</p>
-                <h1>Smart Band 4</h1>
-                <small>The Mi Smart Band 4 features a 39.9% larger
-                    (than Mi Band 3) AMOLED color full-touch display with
-                    adjustable brightness, so everything is clear.</small>
-                    <a href="" class="btn">Buy Now &#8594;</a>
-            </div>
-        </div>
-    </div>
-    </div>
-
-<!---- testimonial ----->
-
-    <div class="testimonial">
-    <div class="small-container">
-        <div class="row">
-            <div class="col-3">
-                <i class="fa fa-quote-left"></i>
-                <p>Lorem Ipsum is simply dummy text of the printins
-                    and typsetting industry. lorem Ipsum has been the
-                    industry's standard dummy text ever</p>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <img src="images/user-1.png">
-                <h3>Sean Parker</h3>
-            </div>
-            <div class="col-3">
-                <i class="fa fa-quote-left"></i>
-                <p>Lorem Ipsum is simply dummy text of the printins
-                    and typsetting industry. lorem Ipsum has been the
-                    industry's standard dummy text ever</p>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <img src="images/user-2.png">
-                <h3>Mike Smith</h3>
-            </div>
-            <div class="col-3">
-                <i class="fa fa-quote-left"></i>
-                <p>Lorem Ipsum is simply dummy text of the printins
-                    and typsetting industry. lorem Ipsum has been the
-                    industry's standard dummy text ever</p>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <img src="images/user-3.png">
-                <h3>Mabel Joe</h3>
+                <p>Exclusively Available on Arap Trap's store.</p>
+                <h1>Arap Trap 2023 SZN</h1>
+                <small>Join the movement and embrace the unparalleled talent and creativity.</small><br>
+                <a href="" class="btn">Explore the Collection &#8594;</a>
             </div>
         </div>
     </div>
@@ -293,7 +263,8 @@
 <!---- brands ----->
 
     <div class="brands">
-    <div class="small-container">
+        <div class="small-container">
+        <h1 class="mb3 text-center">Custom Designs</h1>
         <div class="row">
             <div class="col-5">
                 <img src="images/logo-godrej.png">
@@ -316,43 +287,7 @@
 
 <!---- footer ----->
     <div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-col-1">
-                <h3>Download Our App</h3>
-                <p>Download app for Android and iOS mobile phone</p>
-                <div class="app-logo">
-                    <img src="images/play-store.png">
-                    <img src="images/app-store.png">
-                </div>
-            </div>
-            <div class="footer-col-2">
-                <img src="images/logo-white.png">
-                <p>Our Purpose Is To Sustainably Make the Pleasure And
-                    Benefits of SPorts Accesigble to Many.</p>
-            </div>
-            <div class="footer-col-3">
-                <h3>Useful Links</h3>
-                <ul>
-                    <li>Coupons</li>
-                    <li>Blog Post</li>
-                    <li>Return Policy</li>
-                    <li>Join Affiliate</li>
-                </ul>
-            </div>
-            <div class="footer-col-4">
-                <h3>Follow us</h3>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>YouTube</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <p class="copyright">Copyright 4our Pixels 2023 - Store</p>
+        <p class="copyright mb3">Copyright &copy; <a style="color: inherit;" href="https://4ourpixels.github.io/4ourpixels/">4our Pixels</a> 2023</p>
     </div>
 
 <!---- js for toggle menu ----->
@@ -373,6 +308,7 @@
         }
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </body>
 </html>
