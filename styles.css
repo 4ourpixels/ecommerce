@@ -598,3 +598,8 @@ form a {
     display: none;
   }
 }
+.thumbnail {
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+}

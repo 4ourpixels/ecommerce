@@ -1,0 +1,115 @@
+callbackFunction(
+[
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-1.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-2.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-3.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-4.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-1.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-2.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-3.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-4.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-5.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-6.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-7.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-8.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-9.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-10.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-11.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  },
+  {
+    "name": "Arap Trap T-shirt",
+    "thumbnail": "./images/product-12.png",
+    "price": "$30.00",
+    "date": "2023",
+    "id": null
+  }
+]);

@@ -109,7 +109,10 @@
             </tr>
         </table>
     </div>
+
+    
 </div>
+<div id="productsContainer"></div>
 <!---- footer ----->
     <div class="footer">
         <p class="copyright mb3">Copyright &copy; <a style="color: inherit;" href="https://4ourpixels.github.io/4ourpixels/">4our Pixels</a> 2023</p>
@@ -133,6 +136,61 @@
             MenuItems.style.maxHeight = "0px";
         }
     }
+</script>
+
+<script>
+    function callbackFunction(products) {
+    // Process the JSON data
+    displayProducts(products);
+    }
+
+    // Dynamically create a <script> element to load the JSONP file
+    const script = document.createElement('script');
+    script.src = './products.json';
+    document.body.appendChild(script);
+
+
+    function displayProducts(products) {
+    const container = document.getElementById('productsContainer');
+
+    products.forEach(product => {
+        // Create the necessary HTML elements
+        const productElement = document.createElement('div');
+        productElement.classList.add('product');
+        productElement.classList.add('container');
+
+        const productLinkElement = document.createElement('a');
+        productLinkElement.href = product.src;
+
+        const nameElement = document.createElement('h4');
+        nameElement.textContent = product.name;
+
+        const thumbnailElement = document.createElement('img');
+        thumbnailElement.src = product.thumbnail;
+        thumbnailElement.classList = "thumbnail";
+
+        const priceElement = document.createElement('p');
+        priceElement.textContent = product.price;
+
+        // Append the elements to the container
+        productElement.appendChild(nameElement);
+        productElement.appendChild(thumbnailElement);
+        productElement.appendChild(priceElement);
+        productElement.appendChild(priceElement);
+        productElement.appendChild(productLinkElement);
+        container.appendChild(productElement);
+    });
+    }
+    fetch('./products.json')
+    .then(response => response.json())
+    .then(data => {
+        // Process the JSON data
+        displayProducts(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
 </script>
 
 </body>
