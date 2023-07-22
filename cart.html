@@ -32,7 +32,7 @@
                     <a href="account.html"><li>Account</li></a>
                 </ul>
             </nav>
-            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <a id="cart-count" href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
             <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
@@ -40,7 +40,7 @@
 <!---- cart items details ----->
 
 <div class="small-container cart-page">
-    <table>
+    <table >
         <tr>
             <th>Product</th>
             <th>Quantity</th>
@@ -48,40 +48,10 @@
         </tr>
         <tr>
             <td>
-                <div class="cart-info">
-                    <img src="images/buy-1.png">
+                <div id="cart-page" class="cart-info">
+                    <img id="product-img" src="images/buy-1.png">
                     <div>
-                        <p>Arap Trap T-Shirt</p>
-                        <small>Price: $30.00</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>$60.00</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-2.png">
-                    <div>
-                        <p>Arap Trap T-Shirt</p>
-                        <small>Price: $35.00</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input type="number" value="2"></td>
-            <td>$70.00</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-3.png">
-                    <div>
-                        <p>Arap Trap T-Shirt</p>
+                        <p id="product-title">Arap Trap T-Shirt</p>
                         <small>Price: $30.00</small>
                         <br>
                         <a href="">Remove</a>
@@ -97,7 +67,7 @@
         <table>
             <tr>
                 <td>Subtotal</td>
-                <td>$95.00</td>
+                <td id="sub-total">$0.00</td>
             </tr>
             <tr>
                 <td>Tax</td>
@@ -114,13 +84,11 @@
 </div>
 <div id="productsContainer"></div>
 <!---- footer ----->
-    <div class="footer">
-        <p class="copyright mb3">Copyright &copy; <a style="color: inherit;" href="https://4ourpixels.github.io/4ourpixels/">4our Pixels</a> 2023</p>
-    </div>
+<div class="footer">
+    <p class="copyright mb3">Copyright &copy; <a style="color: inherit;" href="https://4ourpixels.github.io/4ourpixels/">4our Pixels</a> 2023</p>
+</div>
 
 <!---- js for toggle menu ----->
-
-
 <script>
     var MenuItems = document.getElementById("MenuItems");
 
@@ -137,61 +105,7 @@
         }
     }
 </script>
-
-<script>
-    function callbackFunction(products) {
-    // Process the JSON data
-    displayProducts(products);
-    }
-
-    // Dynamically create a <script> element to load the JSONP file
-    const script = document.createElement('script');
-    script.src = './products.json';
-    document.body.appendChild(script);
-
-
-    function displayProducts(products) {
-    const container = document.getElementById('productsContainer');
-
-    products.forEach(product => {
-        // Create the necessary HTML elements
-        const productElement = document.createElement('div');
-        productElement.classList.add('product');
-        productElement.classList.add('container');
-
-        const productLinkElement = document.createElement('a');
-        productLinkElement.href = product.src;
-
-        const nameElement = document.createElement('h4');
-        nameElement.textContent = product.name;
-
-        const thumbnailElement = document.createElement('img');
-        thumbnailElement.src = product.thumbnail;
-        thumbnailElement.classList = "thumbnail";
-
-        const priceElement = document.createElement('p');
-        priceElement.textContent = product.price;
-
-        // Append the elements to the container
-        productElement.appendChild(nameElement);
-        productElement.appendChild(thumbnailElement);
-        productElement.appendChild(priceElement);
-        productElement.appendChild(priceElement);
-        productElement.appendChild(productLinkElement);
-        container.appendChild(productElement);
-    });
-    }
-    fetch('./products.json')
-    .then(response => response.json())
-    .then(data => {
-        // Process the JSON data
-        displayProducts(data);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-
-</script>
-
+<script src="./products.js"></script>
+<script src="./app.js"></script>
 </body>
 </html>
