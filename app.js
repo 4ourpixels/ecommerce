@@ -13,12 +13,14 @@ function renderProducts() {
   products.forEach((product) => {
     productEl.innerHTML += `
         <div class="column-4 ">
-          <img src="${product.imgThumbnail}">
-          <h4 class="text-black fw-bold">${product.title} ${product.type}</h4>
-          <h5>$${product.price}</h5>
-          <div class="add-to-cart btn w-100 text-white" onclick="addToCart(${product.id})">
+          <img src="${product.imgMedium}">
+          <hr />
+          <h4 class="text-black fw-bold">${product.color} ${product.type}</h4>
+          <small class="text-black fw-bold">${product.title} Edition</small>
+          <h5 class="my-2">$${product.price}</h5>
+          <button class="add-to-cart w-100 text-white" onclick="addToCart(${product.id})">
               Add To <i class="fa-solid fa-cart-shopping fa-lg"></i>
-          </div>
+          </button>
         </div>
         `;
   });
@@ -39,6 +41,11 @@ function addToCart(id) {
       ...item,
       numberOfUnits: 1,
     });
+
+    // Update the button text to "Added in the Bag" after adding to cart
+    const addButton = document.querySelector(`[onclick="addToCart(${id})"]`);
+    addButton.innerText = `In the Bag`;
+    addButton.disabled = true; // Disable the button after adding to cart
   }
 
   updateCart();
@@ -51,6 +58,18 @@ function updateCart() {
 
   // save cart to local storage
   localStorage.setItem("CART", JSON.stringify(cart));
+  // Check if the cart is empty and display "No items in cart" if it is
+  const cartMessage = document.getElementById("cart-message");
+  const paypalButtonContainer = document.getElementById(
+    "paypal-button-container"
+  );
+  if (cart.length === 0) {
+    cartMessage.innerHTML = "No items in the bag!";
+    paypalButtonContainer.classList.add("hidden");
+  } else {
+    paypalButtonContainer.classList.remove("hidden");
+    cartMessage.innerHTML = "";
+  }
 }
 
 // calculate and render subtotal
@@ -77,7 +96,8 @@ function renderCartItems() {
       <tr>
           <th scope="row"><img style="height: 70px; width:auto; object-fit: cover" src="${item.imgThumbnail}"></th>
           <td>
-            ${item.title} ${item.type}<br/>
+            ${item.color} ${item.type}<br/>
+            <small>${item.title}</small>
             <div class="trash-btn" onclick="removeItemFromCart(${item.id})">
               <i class="fa-solid fa-trash"></i>
             </div>

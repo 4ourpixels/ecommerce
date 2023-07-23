@@ -44,6 +44,7 @@
         }
     </style>
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=AbxKJTrIe4cI0MpzJKtfFRWUS91uOXcZG7iil5_SB-gfLp24psCWUUSOkSRrm-qzFgKvwGpSWGjCHTuE&currency=USD"></script>
 </head>
 <body>
 <!---- header ----->
@@ -69,6 +70,7 @@
             <!-- cart object goes here -->
             <table class="table table-responsive">
                 <h3>Cart Details</h3>
+                <small id="cart-message" class="text-primary"></small>
                 <thead>
                     <tr>
                     <th></th>
@@ -86,14 +88,19 @@
                 <table>
                     <tr>
                         <td>Total Items</td>
-                        <td id="total-items-in-cart">1</td>
+                        <td id="total-items-in-cart">0</td>
                     </tr>
                     <tr>
                         <td>Sub Total</td>
                         <td id="sub-total">$0.00</td>
                     </tr>
                 </table>
+
+                
             </div>
+            
+            <div class="d-flex justify-content-center py-3"></div>
+            <div id="paypal-button-container"></div>
 
         </div>
     </div>
@@ -143,6 +150,36 @@
         }
         cartBtn.addEventListener("click", toggleCartDetails);
 
+    </script>
+
+    <script>
+        const total = document.getElementById("sub-total").innerText;
+
+        // Set up PayPal button
+        paypal.Buttons({
+        createOrder: function(data, actions) {
+            // This function sets up the details of the transaction, including the order total and currency.
+            return actions.order.create({
+            purchase_units: [{
+                amount: {
+                value: total // Replace with the actual total order amount
+                }
+            }]
+            });
+        },
+        onApprove: function(data, actions) {
+            // This function captures the funds from the transaction.
+            return actions.order.capture().then(function(details) {
+            // This is where you can handle the successful payment. For example, you can display a success message, update the cart status, or redirect to a success page.
+            console.log("Payment successful!");
+            alert("Payment successful!");
+            });
+        },
+        onError: function(err) {
+            // This function handles errors that occur during the PayPal checkout process.
+            console.error("An error occurred during checkout:", err);
+        }
+        }).render('#paypal-button-container');
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
