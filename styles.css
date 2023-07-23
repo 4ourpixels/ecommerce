@@ -61,6 +61,14 @@ p {
   max-width: 100%;
   padding: 50px 0;
 }
+.column-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.column-2 img {
+  max-width: 100%;
+}
 
 .col-2 h1 {
   font-size: 50px;
@@ -690,4 +698,11 @@ form a {
 .cart-btn {
   background: none;
   border: none;
+}
+.underline {
+  text-decoration: none;
+  color: inherit;
+}
+.underline:hover {
+  color: inherit;
 }
