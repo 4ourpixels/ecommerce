@@ -123,14 +123,3 @@ function changeNumberOfUnits(action, id) {
 
   updateCart();
 }
-
-// Function to toggle the cart-details element
-function toggleCartDetails() {
-  var cartDetails = document.getElementById("cart-details");
-  if (cartDetails.classList.contains("hidden")) {
-    cartDetails.classList.remove("hidden");
-  } else {
-    cartDetails.classList.add("hidden");
-  }
-}
-cartBtn.addEventListener("click", toggleCartDetails);
