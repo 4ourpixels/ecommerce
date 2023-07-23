@@ -13,9 +13,15 @@ function renderProducts() {
   products.forEach((product) => {
     productEl.innerHTML += `
         <div class="column-4 ">
-          <img src="${product.imgMedium}">
+          <a class="underline" href="./product-detail.html?productId=${product.id}">
+            <img src="${product.imgMedium}">
+          </a>
           <hr />
-          <h4 class="text-black fw-bold">${product.color} ${product.type}</h4>
+          <h4 class="text-black fw-bold">
+            <a class="underline" href="./product-detail.html?productId=${product.id}">
+              ${product.color} ${product.type}
+            </a>
+          </h4>
           <small class="text-black fw-bold">${product.title} Edition</small>
           <h5 class="my-2">$${product.price}</h5>
           <button class="add-to-cart w-100 text-white" onclick="addToCart(${product.id})">
