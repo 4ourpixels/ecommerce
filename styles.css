@@ -652,7 +652,26 @@ form a {
   width: auto;
   height: 50px;
 }
+
 .trash-btn {
+  cursor: pointer;
+}
+.trash-btn:hover {
+  color: red;
+}
+.cart-quantity-btn {
+  background: #f6f6f6;
+  border: none;
+  color: #2a403e;
+}
+.cart-quantity-btn:hover {
+  background-color: #30d5c8;
+  color: #fff;
+}
+.cart-btn {
   background: none;
   border: none;
+}
+.hidden {
+  display: none;
 }

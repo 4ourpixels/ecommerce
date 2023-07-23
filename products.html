@@ -36,6 +36,12 @@
         .mb3{
             margin-bottom: 3rem;
         }
+        .inherit{
+            color: inherit;
+        }
+        .inherit:hover{
+            color: inherit;
+        }
     </style>
     <link rel="stylesheet" href="./styles.css">
 </head>
@@ -49,21 +55,50 @@
             </div>
             <nav>
                 <ul id="MenuItems">
-                    <li><a href="index.html">Home</li></a>
-                    <li><a href="products.html">Shop</li></a>
-                    <a href="account.html"><li>Gallery</li></a>
+                    <li><a class="inherit" href="index.html">Home</li></a>
+                    <li><a class="inherit" href="./products.html">Shop</li></a>
                 </ul>
             </nav>
-            <a id="cart-count" class="text-black" href="./cart.html"><img src="./images/cart.png" width="30px" height="30px"></a>
+            <button id="cart-btn" class="text-black cart-btn"><img src="./images/cart.png" width="30px" height="30px"></button>
             <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
     <div class="container">
-        <div id="cart-info" class="row">
+
+        <div id="cart-details" class="row p-5 border hidden rounded m-5">
             <!-- cart object goes here -->
+            <table class="table table-responsive">
+                <h3>Cart Details</h3>
+                <thead>
+                    <tr>
+                    <th></th>
+                    <th class="col text-black">Item</th>
+                    <th class="col text-black">Quantity</th>
+                    <th class="col text-black">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-info">
+                    
+                </tbody>
+            </table>
+
+            <div class="total-price">
+                <table>
+                    <tr>
+                        <td>Total Items</td>
+                        <td id="total-items-in-cart">1</td>
+                    </tr>
+                    <tr>
+                        <td>Sub Total</td>
+                        <td id="sub-total">$0.00</td>
+                    </tr>
+                </table>
+            </div>
 
         </div>
+    </div>
 
+    <div class="container">
         <div id="products" class="row">
             <!-- object goes here -->
         </div>

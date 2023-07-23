@@ -4,14 +4,15 @@ const subTotalAmount = document.getElementById("sub-total");
 const cartItemsEl = document.getElementById("cart-info");
 const quantity = document.getElementById("quantity");
 const totalItemsInCart = document.getElementById("total-items-in-cart");
-const cartCount = document.getElementById("cart-count");
+const cartBtn = document.getElementById("cart-btn");
 const itemPrice = document.getElementById("item-price");
+const cartContainer = document.getElementById("cart-details");
 // Render products function
 
 function renderProducts() {
   products.forEach((product) => {
     productEl.innerHTML += `
-        <div class="column-4">
+        <div class="column-4 ">
           <img src="${product.imgThumbnail}">
           <h4 class="text-black fw-bold">${product.title} ${product.type}</h4>
           <h5>$${product.price}</h5>
@@ -63,22 +64,34 @@ function renderSubtotal() {
   });
   subTotalAmount.innerHTML = `$${totalPrice}`;
   totalItemsInCart.innerHTML = `${totalItems}`;
-  cartCount.innerHTML = `<img src="./images/cart.png" width="30px" height="30px">${totalItems}`;
+  cartBtn.innerHTML = `<img src="./images/cart.png" width="30px" height="30px">${totalItems}`;
 }
 
 // Render cart items
 function renderCartItems() {
+  let totalPrice = 0;
   cartItemsEl.innerHTML = "";
   cart.forEach((item) => {
+    totalPrice = item.price * item.numberOfUnits;
     cartItemsEl.innerHTML += `
-      <img class="product-thumbnail" src="${item.imgThumbnail}">
-      <div>
-          <h5 class="fw-bold">${item.title}</h5>
-          <h6>Price: $${item.price}</h6>
-          <button class="trash-btn text-danger" class="text-danger" onclick="removeItemFromCart(${item.id})"><i class="fa-solid fa-trash-can fa-lg"></i></button>
-      </div>
+      <tr>
+          <th scope="row"><img style="height: 70px; width:auto; object-fit: cover" src="${item.imgThumbnail}"></th>
+          <td>
+            ${item.title} ${item.type}<br/>
+            <div class="trash-btn" onclick="removeItemFromCart(${item.id})">
+              <i class="fa-solid fa-trash"></i>
+            </div>
+          </td>
+          <td>
+            <div class="row text-center">
+              <button class="cart-quantity-btn" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
+              <h5>${item.numberOfUnits}</h5>
+              <button class="cart-quantity-btn" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
+            </div>
+          </td>
+          <td>$${totalPrice}</td>
+      </tr>
         `;
-    cartItemsElement.innerHTML += cartItemHTML;
   });
 }
 
@@ -108,5 +121,16 @@ function changeNumberOfUnits(action, id) {
     };
   });
 
-  updadateCart();
+  updateCart();
 }
+
+// Function to toggle the cart-details element
+function toggleCartDetails() {
+  var cartDetails = document.getElementById("cart-details");
+  if (cartDetails.classList.contains("hidden")) {
+    cartDetails.classList.remove("hidden");
+  } else {
+    cartDetails.classList.add("hidden");
+  }
+}
+cartBtn.addEventListener("click", toggleCartDetails);
