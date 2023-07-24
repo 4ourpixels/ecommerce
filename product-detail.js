@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const productDetails = document.getElementById("product-details");
   const productType = document.getElementById("product-type");
   const pageTitle = document.getElementById("page-title");
+  const productImg = document.getElementById("ProductImg");
 
   if (product) {
     productTitle.innerHTML = `${product.title}`;
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     productDetails.innerHTML = `${product.description}`;
     productType.innerHTML = `${product.color} ${product.type}`;
     pageTitle.innerHTML = `Arap Trap - ${product.title}`;
+    productImg.src = product.imgLarge;
     productDetailsContainer.innerHTML = `
             <div>
                 <h2>${product.color} ${product.type}</h2>

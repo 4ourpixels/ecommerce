@@ -73,7 +73,6 @@ p {
 .col-2 h1 {
   font-size: 50px;
   line-height: 60px;
-  margin: 25px 0;
 }
 
 .btn {
@@ -398,15 +397,8 @@ select:focus {
 
 /*---- single product details ----*/
 
-.single-products {
-  margin-top: 80px;
-}
-
 .single-products .col-2 img {
   padding: 0;
-}
-.single-products .col-2 {
-  padding: 20px;
 }
 
 .single-products h4 {
@@ -608,9 +600,7 @@ form a {
   .single-products .row {
     text-align: left;
   }
-  .single-products .col-2 {
-    padding: 20px 0;
-  }
+
   .single-products h1 {
     font-size: 26px;
     line-height: 32px;
