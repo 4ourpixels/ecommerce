@@ -66,7 +66,7 @@
     </div>
     <div class="container">
 
-        <div id="cart-details" class="row p-5 border hidden rounded m-5">
+        <div id="cart-details" class="row py-5 px-3 border hidden rounded">
             <!-- cart object goes here -->
             <table class="table table-responsive">
                 <h3>Cart Details</h3>
@@ -100,12 +100,20 @@
             </div>
             
             <div class="d-flex justify-content-center py-3"></div>
+            <button id="lipa-na-mpesa-btn" class="btn" onclick="pay()">Lipa Na Mpesa</button>
             <div id="paypal-button-container"></div>
 
         </div>
     </div>
 
     <div class="container">
+        <h2>Showing All Products</h2>
+        <select id="sortingOptions" onchange="sortProducts()">
+            <option value="default">Default</option>
+            <option value="popular">Popular</option>
+            <option value="latest">Latest</option>
+        </select>
+
         <div id="products" class="row">
             <!-- object goes here -->
         </div>
@@ -180,6 +188,20 @@
             console.error("An error occurred during checkout:", err);
         }
         }).render('#paypal-button-container');
+    </script>
+    <script>
+        function pay(){
+            var url = "https://tinypesa.com/api/v1/express/initialize";
+
+            fetch(url, {
+                body: "amount=1&msisdn=0712575797&account_no=400",
+                headers: {
+                    Apikey: "Me3s8tLM8vW",
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                method: "POST",
+            });
+        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

@@ -7,12 +7,14 @@ const totalItemsInCart = document.getElementById("total-items-in-cart");
 const cartBtn = document.getElementById("cart-btn");
 const itemPrice = document.getElementById("item-price");
 const cartContainer = document.getElementById("cart-details");
+const lipaNaMpesaBtn = document.getElementById("lipa-na-mpesa-btn");
+
 // Render products function
 
 function renderProducts() {
   products.forEach((product) => {
     productEl.innerHTML += `
-        <div class="column-4 ">
+        <div class="column-4">
           <a class="underline" href="./product-detail.html?productId=${product.id}">
             <img src="${product.imgMedium}">
           </a>
@@ -72,8 +74,10 @@ function updateCart() {
   if (cart.length === 0) {
     cartMessage.innerHTML = "No items in the bag!";
     paypalButtonContainer.classList.add("hidden");
+    lipaNaMpesaBtn.classList.add("hidden");
   } else {
     paypalButtonContainer.classList.remove("hidden");
+    lipaNaMpesaBtn.classList.remove("hidden");
     cartMessage.innerHTML = "";
   }
 }
@@ -148,4 +152,27 @@ function changeNumberOfUnits(action, id) {
   });
 
   updateCart();
+}
+
+function sortProducts() {
+  const sortingOptions = document.getElementById("sortingOptions");
+  const selectedOption = sortingOptions.value;
+
+  switch (selectedOption) {
+    case "popular":
+      products.sort((a, b) => b.instock - a.instock); // Sort by popularity (descending order of instock)
+      break;
+    case "latest":
+      products.sort((a, b) => b.id - a.id); // Sort by the latest (descending order of id)
+      break;
+    case "default":
+    default:
+      // If "Default Sorting" or invalid option selected, reset the array to its original order
+      products.sort((a, b) => a.id - b.id);
+      break;
+  }
+
+  // After sorting, update the rendered products in the HTML
+  productEl.innerHTML = ""; // Clear existing product elements
+  renderProducts();
 }
