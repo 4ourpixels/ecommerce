@@ -716,7 +716,7 @@ form a {
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.6)
     ),
-    url(../images/landscape.png);
+    url(./images/landscape.png);
   background-size: cover;
   background-position: center;
   height: 30vh;
