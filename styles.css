@@ -52,12 +52,12 @@ p {
   justify-content: space-around;
 }
 
-.column-2 {
+.col-2 {
   flex-basis: 50%;
   min-width: 300px;
 }
 
-.column-2 img {
+.col-2 img {
   max-width: 100%;
   padding: 50px 0;
 }
@@ -70,7 +70,7 @@ p {
   max-width: 100%;
 }
 
-.column-2 h1 {
+.col-2 h1 {
   font-size: 50px;
   line-height: 60px;
 }
@@ -97,14 +97,22 @@ p {
   background: #000;
 }
 
-.column-3 {
+.header .row {
+  margin-top: 70px;
+}
+
+.categories {
+  margin: 70px 0;
+}
+
+.col-3 {
   flex-basis: 30%;
   min-width: 250px;
   margin-bottom: 30px;
   transition: transform 0.5s;
 }
 
-.column-3 img {
+.col-3 img {
   width: 100%;
 }
 
@@ -168,7 +176,7 @@ h4 {
 /* .column-4:hover {
   transform: translateY(-5px);
 } */
-.column-3:hover {
+.col-3:hover {
   transform: translateY(-5px);
 }
 
@@ -180,7 +188,7 @@ h4 {
   padding: 30px 0;
 }
 
-.column-2 .offer-img {
+.col-2 .offer-img {
   padding: 50px;
 }
 
@@ -194,7 +202,7 @@ small {
   padding-top: 100px;
 }
 
-.testimonialumn .col-3 {
+.testimonial .col-3 {
   text-align: center;
   padding: 40px 20px;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
@@ -202,13 +210,13 @@ small {
   transition: transform 0.5s;
 }
 
-.testimonialumn .col-3 img {
+.testimonial .col-3 img {
   width: 50px;
   margin-top: 20px;
   border-radius: 50px;
 }
 
-.testimonialumn .col-3:hover {
+.testimonial .col-3:hover {
   transform: translateY(-10px);
 }
 
@@ -217,13 +225,13 @@ small {
   color: #30d5c8;
 }
 
-.column-3 p {
+.col-3 p {
   font-size: 12px;
   margin: 12px 0;
   color: #777;
 }
 
-.testimonialumn .col-3 h3 {
+.testimonial .col-3 h3 {
   font-weight: 600;
   color: #555;
   font-size: 16px;
@@ -389,7 +397,7 @@ select:focus {
 
 /*---- single product details ----*/
 
-.single-products .column-2 img {
+.single-products .col-2 img {
   padding: 0;
 }
 
@@ -584,8 +592,8 @@ form a {
   .row {
     text-align: center;
   }
-  .column-2,
-  .column-3,
+  .col-2,
+  .col-3,
   .column-4 {
     flex-basis: 100%;
   }
@@ -673,6 +681,21 @@ form a {
   color: #fff;
 }
 
+.hidden {
+  display: none;
+}
+
+.cart-btn {
+  background: none;
+  border: none;
+}
+.underline {
+  text-decoration: none;
+  color: inherit;
+}
+.underline:hover {
+  color: inherit;
+}
 .hidden {
   display: none;
 }

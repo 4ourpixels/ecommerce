@@ -21,6 +21,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css">
     <script src="https://www.paypal.com/sdk/js?client-id=AbxKJTrIe4cI0MpzJKtfFRWUS91uOXcZG7iil5_SB-gfLp24psCWUUSOkSRrm-qzFgKvwGpSWGjCHTuE&currency=USD"></script>
+    <style>
+        .btn-danger{
+            background-color: red;
+            color: #fff;
+            border: 1px solid red;
+            border-radius: 8px;
+            padding: .5rem 1rem;
+        }
+        .btn-danger:hover{
+            background-color: rgb(192, 0, 0);
+            color: #fff;
+            border: 1px solid  rgb(192, 0, 0);;
+        }
+    </style>
 </head>
 <body>
 <!---- header ----->
@@ -94,7 +108,7 @@
                 <div class="row">
                     <button id="lipa-na-mpesa-btn" onclick="pay()">Lipa Na Mpesa</button>
                     <div id="paypal-button-container"></div>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
             </div>
@@ -109,9 +123,11 @@
             <option value="popular">Popular</option>
             <option value="latest">Latest</option>
         </select>
-
-        <div id="products" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <!-- object goes here -->
+        
+        <div class="row">
+            <div id="products" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <!-- object goes here -->
+            </div>
         </div>
     </div>
 
