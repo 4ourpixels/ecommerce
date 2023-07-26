@@ -52,12 +52,12 @@ p {
   justify-content: space-around;
 }
 
-.col-2 {
+.column-2 {
   flex-basis: 50%;
   min-width: 300px;
 }
 
-.col-2 img {
+.column-2 img {
   max-width: 100%;
   padding: 50px 0;
 }
@@ -70,7 +70,7 @@ p {
   max-width: 100%;
 }
 
-.col-2 h1 {
+.column-2 h1 {
   font-size: 50px;
   line-height: 60px;
 }
@@ -97,22 +97,14 @@ p {
   background: #000;
 }
 
-.header .row {
-  margin-top: 70px;
-}
-
-.categories {
-  margin: 70px 0;
-}
-
-.col-3 {
+.column-3 {
   flex-basis: 30%;
   min-width: 250px;
   margin-bottom: 30px;
   transition: transform 0.5s;
 }
 
-.col-3 img {
+.column-3 img {
   width: 100%;
 }
 
@@ -176,7 +168,7 @@ h4 {
 /* .column-4:hover {
   transform: translateY(-5px);
 } */
-.col-3:hover {
+.column-3:hover {
   transform: translateY(-5px);
 }
 
@@ -188,7 +180,7 @@ h4 {
   padding: 30px 0;
 }
 
-.col-2 .offer-img {
+.column-2 .offer-img {
   padding: 50px;
 }
 
@@ -202,7 +194,7 @@ small {
   padding-top: 100px;
 }
 
-.testimonial .col-3 {
+.testimonialumn .col-3 {
   text-align: center;
   padding: 40px 20px;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
@@ -210,13 +202,13 @@ small {
   transition: transform 0.5s;
 }
 
-.testimonial .col-3 img {
+.testimonialumn .col-3 img {
   width: 50px;
   margin-top: 20px;
   border-radius: 50px;
 }
 
-.testimonial .col-3:hover {
+.testimonialumn .col-3:hover {
   transform: translateY(-10px);
 }
 
@@ -225,13 +217,13 @@ small {
   color: #30d5c8;
 }
 
-.col-3 p {
+.column-3 p {
   font-size: 12px;
   margin: 12px 0;
   color: #777;
 }
 
-.testimonial .col-3 h3 {
+.testimonialumn .col-3 h3 {
   font-weight: 600;
   color: #555;
   font-size: 16px;
@@ -397,7 +389,7 @@ select:focus {
 
 /*---- single product details ----*/
 
-.single-products .col-2 img {
+.single-products .column-2 img {
   padding: 0;
 }
 
@@ -592,8 +584,8 @@ form a {
   .row {
     text-align: center;
   }
-  .col-2,
-  .col-3,
+  .column-2,
+  .column-3,
   .column-4 {
     flex-basis: 100%;
   }
