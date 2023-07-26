@@ -15,11 +15,11 @@ function renderProducts() {
   products.forEach((product) => {
     productEl.innerHTML += `
         <div class="col mb-5">
-          <div class=" h-100">
+          <div class="h-100">
             <a class="underline" href="./product-detail.html?productId=${product.id}">
               <img
                 class="card-img-top"
-                src="${product.imgMedium}"
+                src="${product.imgThumbnail}"
               >
             </a>
             <hr />

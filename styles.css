@@ -740,3 +740,6 @@ form a {
 .inherit:hover {
   color: #30d5c8;
 }
+.card-img-top {
+  width: 100%;
+}

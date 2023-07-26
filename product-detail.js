@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const productImg = document.getElementById("ProductImg");
 
   if (product) {
-    productTitle.innerHTML = `${product.title}`;
+    productTitle.innerHTML = `${product.title} ${product.type}`;
     productPrice.innerHTML = `$${product.price}`;
     productDetails.innerHTML = `${product.description}`;
     productType.innerHTML = `${product.color} ${product.type}`;
@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>${product.title} Edition</p>
                 <p>Price: $${product.price}</p>
                 <img src="${product.imgLarge}" alt="${product.color} ${product.type}" />
-                <!-- Add any other product details you want to display -->
             </div>
         `;
   } else {
