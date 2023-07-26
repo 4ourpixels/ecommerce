@@ -14,21 +14,26 @@ const lipaNaMpesaBtn = document.getElementById("lipa-na-mpesa-btn");
 function renderProducts() {
   products.forEach((product) => {
     productEl.innerHTML += `
-        <div class="column-4">
-          <a class="underline" href="./product-detail.html?productId=${product.id}">
-            <img src="${product.imgMedium}">
-          </a>
-          <hr />
-          <h4 class="text-black fw-bold">
+        <div class="col mb-5">
+          <div class=" h-100">
             <a class="underline" href="./product-detail.html?productId=${product.id}">
-              ${product.color} ${product.type}
+              <img
+                class="card-img-top"
+                src="${product.imgMedium}"
+              >
             </a>
-          </h4>
-          <small class="text-black fw-bold">${product.title} Edition</small>
-          <h5 class="my-2">$${product.price}</h5>
-          <button class="add-to-cart w-100 text-white" onclick="addToCart(${product.id})">
-              Add To <i class="fa-solid fa-cart-shopping fa-lg"></i>
-          </button>
+            <hr />
+            <h4 class="text-black text-start fw-bold">
+              <a class="underline text-black" href="./product-detail.html?productId=${product.id}">
+                ${product.color} ${product.type}
+              </a>
+            </h4>
+            <h6 class="text-start text-black fw-bold">${product.title} Edition</h6>
+            <h5 class="my-2 text-start">$${product.price}</h5>
+            <button class="add-to-cart w-100 text-white" onclick="addToCart(${product.id})">
+                Add To <i class="fa-solid fa-cart-shopping fa-lg"></i>
+            </button>
+          </div>
         </div>
         `;
   });
@@ -107,7 +112,6 @@ function renderCartItems() {
           <th scope="row"><img style="height: 70px; width:auto; object-fit: cover" src="${item.imgThumbnail}"></th>
           <td>
             ${item.color} ${item.type}<br/>
-            <small>${item.title}</small>
             <div class="trash-btn" onclick="removeItemFromCart(${item.id})">
               <i class="fa-solid fa-trash"></i>
             </div>

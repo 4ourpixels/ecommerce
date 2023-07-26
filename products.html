@@ -19,30 +19,6 @@
     rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .text-primary-change{
-            color: #30d5c8;
-        }
-        .text-white{
-            color: #ffffff;
-        }
-        .text-center {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .mb3{
-            margin-bottom: 3rem;
-        }
-        .inherit{
-            color: inherit;
-        }
-        .inherit:hover{
-            color: inherit;
-        }
-    </style>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://www.paypal.com/sdk/js?client-id=AbxKJTrIe4cI0MpzJKtfFRWUS91uOXcZG7iil5_SB-gfLp24psCWUUSOkSRrm-qzFgKvwGpSWGjCHTuE&currency=USD"></script>
 </head>
@@ -56,65 +32,85 @@
             </div>
             <nav>
                 <ul id="MenuItems">
-                    <li><a class="inherit" href="index.html">Home</li></a>
-                    <li><a class="inherit" href="./products.html">Shop</li></a>
+                    <li><a class="underline inherit" href="index.html">Home</li></a>
+                    <li><a class="underline inherit" href="./products.html">Shop</li></a>
+                    <li><a class="underline inherit" href="https://4ourpixels.github.io/4ourpixels/djg400.html">Mixes</li></a>
                 </ul>
             </nav>
-            <button id="cart-btn" class="text-black cart-btn"><img src="./images/cart.png" width="30px" height="30px"></button>
+            <!-- Button trigger modal -->
+            <button 
+                id="cart-btn"
+                class="text-black cart-btn"
+                type="button"   
+                data-bs-toggle="modal"
+                data-bs-target="#cartModal"
+            >
+                <img src="./images/cart.png" width="30px" height="30px">
+            </button>
             <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
-    <div class="container">
+    <header id="banner"></header>
 
-        <div id="cart-details" class="row py-5 px-3 border hidden rounded">
-            <!-- cart object goes here -->
-            <table class="table table-responsive">
-                <h3>Cart Details</h3>
-                <small id="cart-message" class="text-primary"></small>
-                <thead>
-                    <tr>
-                    <th></th>
-                    <th class="col text-black">Item</th>
-                    <th class="col text-black">Quantity</th>
-                    <th class="col text-black">Total</th>
-                    </tr>
-                </thead>
-                <tbody id="cart-info">
-                    
-                </tbody>
-            </table>
-
-            <div class="total-price">
-                <table>
-                    <tr>
-                        <td>Total Items</td>
-                        <td id="total-items-in-cart">0</td>
-                    </tr>
-                    <tr>
-                        <td>Sub Total</td>
-                        <td id="sub-total">$0.00</td>
-                    </tr>
+    <!-- Modal -->
+    <div class="modal fade container-fluid" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="cartModalLabel">Your Cart Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- cart object goes here -->
+                <table class="table table-responsive">
+                    <small id="cart-message" class="text-primary"></small>
+                    <thead>
+                        <tr>
+                        <th></th>
+                        <th class="col text-black">Item</th>
+                        <th class="col text-black">Quantity</th>
+                        <th class="col text-black">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-info">
+                        
+                    </tbody>
                 </table>
 
-                
+                <div class="total-price">
+                    <table class="w-100">
+                        <tr>
+                            <td>Total Items</td>
+                            <td id="total-items-in-cart">0</td>
+                        </tr>
+                        <tr>
+                            <td>Sub Total</td>
+                            <td id="sub-total">$0.00</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            
-            <div class="d-flex justify-content-center py-3"></div>
-            <button id="lipa-na-mpesa-btn" class="btn" onclick="pay()">Lipa Na Mpesa</button>
-            <div id="paypal-button-container"></div>
-
+            <div class="modal-footer">
+                <div class="row">
+                    <button id="lipa-na-mpesa-btn" onclick="pay()">Lipa Na Mpesa</button>
+                    <div id="paypal-button-container"></div>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
+    
 
     <div class="container">
-        <h2>Showing All Products</h2>
+        <h2 class="my-4">Showing All Products</h2>
         <select id="sortingOptions" onchange="sortProducts()">
-            <option value="default">Default</option>
+            <option value="default">Sort By Default</option>
             <option value="popular">Popular</option>
             <option value="latest">Latest</option>
         </select>
 
-        <div id="products" class="row">
+        <div id="products" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <!-- object goes here -->
         </div>
     </div>
@@ -146,8 +142,8 @@
         }
     </script>
 
-    <script>
-        // Function to toggle the cart-details element
+     <!-- Function to toggle the cart-details element -->
+    <!-- <script>
         function toggleCartDetails() {
         var cartDetails = document.getElementById("cart-details");
         if (cartDetails.classList.contains("hidden")) {
@@ -158,7 +154,7 @@
         }
         cartBtn.addEventListener("click", toggleCartDetails);
 
-    </script>
+    </script> -->
 
     <script>
         const total = document.getElementById("sub-total").innerText;
