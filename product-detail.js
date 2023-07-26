@@ -27,20 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const productImg = document.getElementById("ProductImg");
 
   if (product) {
-    productTitle.innerHTML = `${product.title} ${product.type}`;
+    productTitle.innerHTML = `${product.title}`;
     productPrice.innerHTML = `$${product.price}`;
     productDetails.innerHTML = `${product.description}`;
     productType.innerHTML = `${product.color} ${product.type}`;
     pageTitle.innerHTML = `Arap Trap - ${product.title}`;
     productImg.src = product.imgLarge;
-    productDetailsContainer.innerHTML = `
-            <div>
-                <h2>${product.color} ${product.type}</h2>
-                <p>${product.title} Edition</p>
-                <p>Price: $${product.price}</p>
-                <img src="${product.imgLarge}" alt="${product.color} ${product.type}" />
-            </div>
-        `;
   } else {
     productDetailsContainer.innerHTML = "<p>Product not found.</p>";
   }

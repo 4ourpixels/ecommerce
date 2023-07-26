@@ -33,7 +33,7 @@
                 </ul>
             </nav>
             <a id="cart-btn" href="products.html"><img src="images/cart.png" width="30px" height="30px"></a>
-            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
 
@@ -45,11 +45,11 @@
                     <img width="100%" id="ProductImg">
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12" >
-                <a href="#" id="go-back-link">Back To Shop</a>
+                <a class="text-start" href="#" id="go-back-link">Back To Shop</a>
                 <h1 class="text-start" id="product-title"></h1>
                 <h4 class="text-start" id="product-price">$0.00</h4>
                 <p class="text-start" id="product-type"></p>
-                <button class="btn">Add To Cart</button>
+                <button onclick="addToCART()" id="add-to-cart" class="btn">Add To Cart</button>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
@@ -59,7 +59,7 @@
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                                <p id="product-details"></p>
+                                <p class="text-start" id="product-details"></p>
                             </div>
                         </div>
                     </div>
@@ -74,8 +74,6 @@
     </div>
 
     <!---- js for toggle menu ----->
-
-
     <script>
         var MenuItems = document.getElementById("MenuItems");
 
@@ -91,31 +89,6 @@
                 MenuItems.style.maxHeight = "0px";
             }
         }
-    </script>
-
-    <!---- js for product gallery ----->
-
-    <script>
-        var ProductImg = document.getElementById("ProductImg");
-        var SmallImg = document.getElementsByClassName("small-img");
-
-            SmallImg[0].onclick = function()
-            {
-                ProductImg.src = SmallImg[0].src;
-            }
-            SmallImg[1].onclick = function()
-            {
-                ProductImg.src = SmallImg[1].src;
-            }
-            SmallImg[2].onclick = function()
-            {
-                ProductImg.src = SmallImg[2].src;
-            }
-            SmallImg[3].onclick = function()
-            {
-                ProductImg.src = SmallImg[3].src;
-            }
-
     </script>
 
     <script>
