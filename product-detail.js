@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     productDetails.innerHTML = `${product.description}`;
     productType.innerHTML = `${product.color} ${product.type}`;
     pageTitle.innerHTML = `Arap Trap - ${product.title}`;
-    productImg.src = product.imgLarge;
+    productImg.src = product.imgMedium;
   } else {
     productDetailsContainer.innerHTML = "<p>Product not found.</p>";
   }
