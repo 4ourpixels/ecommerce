@@ -39,16 +39,16 @@
 <body>
 <!---- header ----->
 
-    <div class="container">
+    <div class="container sticky">
         <div class="navbar">
             <div class="logo">
                 <a href="index.html"><img height="50" width="auto" style="filter: invert();" src="./images/g400.png" width="125px"></a>
             </div>
             <nav>
                 <ul id="MenuItems">
-                    <li><a class="underline inherit" href="index.html">Home</li></a>
-                    <li><a class="underline inherit" href="./products.html">Shop</li></a>
-                    <li><a class="underline inherit" href="https://4ourpixels.github.io/4ourpixels/djg400.html">Mixes</li></a>
+                    <li><a class="underline text-white" href="index.html">Home</li></a>
+                    <li><a class="underline text-white" href="./products.html">Shop</li></a>
+                    <li><a class="underline text-white" href="https://4ourpixels.github.io/4ourpixels/djg400.html">Mixes</li></a>
                 </ul>
             </nav>
             <!-- Button trigger modal -->
@@ -64,7 +64,6 @@
             <img src="./images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
-    <header id="banner"></header>
 
     <!-- Modal -->
     <div class="modal fade container-fluid" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
@@ -116,12 +115,12 @@
     </div>
     
 
-    <div class="container">
-        <h2 class="my-4">Showing All Products</h2>
+    <div class="container pt-5">
+        <h2 style="margin-top: 2rem;"  class="mt-5">Showing All Products</h2>
         <select id="sortingOptions" onchange="sortProducts()">
             <option value="default">Sort By Default</option>
-            <option value="popular">Popular</option>
-            <option value="latest">Latest</option>
+            <option value="popular">Sort By Popular</option>
+            <option value="latest">Sort By Latest</option>
         </select>
         
         <div id="products" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-4 row-cols-xl-4 justify-content-center">

@@ -40,36 +40,35 @@
     <!---- single product details ----->
 
     <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <img width="100%" id="ProductImg">
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12" >
-                <a class="text-start" href="#" id="go-back-link">Back To Shop</a>
-                <h1 class="text-start" id="product-title"></h1>
-                <h4 class="text-start" id="product-price">$0.00</h4>
-                <p class="text-start" id="product-type"></p>
-                <button onclick="addToCART()" id="add-to-cart" class="btn">Add To Cart</button>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            <h5>Read More About The Product</h5>
-                        </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <p class="text-start" id="product-details"></p>
-                            </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <img class="img-fluid" id="ProductImg">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12" >
+            <a class="text-start" href="#" id="go-back-link">Back To Shop</a>
+            <h1 class="text-start" id="product-title"></h1>
+            <h4 class="text-start" id="product-price">$0.00</h4>
+            <p class="text-start" id="product-type"></p>
+            <button onclick="addToCART()" id="add-to-cart" class="btn">Add To Cart</button>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <h5>Read More About The Product</h5>
+                    </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="text-start" id="product-details"></p>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
     </div>
 
     <!---- footer ----->
-    <div class="footer">
+    <div class="container">
         <p class="copyright mb3">Copyright &copy; <a style="color: inherit;" href="https://4ourpixels.github.io/4ourpixels/">4our Pixels</a> 2023</p>
     </div>
 
